@@ -5,16 +5,68 @@
 		<link rel="stylesheet" href="css/style.css"/>
 	</head>
 	<body>
-		<h4>Happy Coding</h4>
 		<!-- Coding area -->
-		
-		
-		
-		
-		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12"><h4>Happy Coding</h4></div>
+				<div class="col-md-12">
+					<div class="panel panel-info" ng-app="mcpApp" ng-controller="inputInteract">
+						<div class="panel-heading">
+							<h4>Play around with input</h4>
+						</div>
+						<div class="panel-body">
+							<div class="col-md-8">
+								<form>
+									<div class="form-group">
+										<label for="exampleInputEmail1">Email address</label>
+										<input type="text" ng-model="email" class="form-control" id="exampleInputEmail1" placeholder="Text In Here">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Password</label>
+										<input type="password" ng-model="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputFile">File input</label>
+										<input type="file" id="exampleInputFile">
+										<p class="help-block">Example block-level help text here.</p>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputFile">Long String</label>
+										<textarea class="form-control" ng-model="long_string"  name="long_string" rows="3"></textarea>
+									</div>
+									<div class="form-group">
+										<label for="exampleInputFile">Dropdown</label>
+										<select id="age" name="age" ng-model="age" class="form-control">
+											<option ng-repeat="num in luckyNumbers" value="{{num}}">Number {{num}}</option>
+											
+										</select>
+									</div>
+									<div class="checkbox">
+										<label>
+										<input type="checkbox"> Check me out
+										</label>
+									</div>
+									<div class="radio">
+										<label>
+											<input id="optionsRadios1" name="optionsRadios" type="radio" value="option1" />
+											Option one is this and that&mdash;be sure to include why it's great
+										</label>
+									</div>
+									<button type="submit" class="btn btn-default">Submit</button>
+								</form>
+							</div>
+							<div ng-controller="mainController" class="col-md-4">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<!-- End coding area -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
 		<script src="js/angular.min.js"></script>
+		<script src="js/app.js"></script>
+		<!-- <script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script> -->
 	</body>
 </html>
